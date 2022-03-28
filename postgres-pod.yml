@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres-pod
+  labels:
+    name: postgres-pod
+    app: demo-voting-app
+spec:
+  containers:
+    - name: postgress
+      image: postgres
+      ports:
+        - containerPort: 5432
+      env:
+        - MYSQL_PASSWORD= mohanlal
+...
